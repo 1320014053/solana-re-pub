@@ -1,0 +1,13 @@
+[package]
+name = "poc-framework-v3"
+version = "0.3.0"
+authors = []
+edition = "2018"
+repository = "https://github.com/neodyme-labs/solana-poc-framework"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["solana", "smart", "contracts"]
+description = "A framework for creating PoC's for Solana Smart Contracts in a painless and intuitive way"
+
+[dependencies]
+

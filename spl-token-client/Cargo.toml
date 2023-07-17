@@ -1,0 +1,22 @@
+[package]
+authors = ["Solana Maintainers <maintainers@solana.foundation>"]
+description = "SPL-Token Rust Client"
+edition = "2018"
+license = "Apache-2.0"
+name = "spl-token-client"
+repository = "https://github.com/solana-labs/solana-program-library"
+version = "0.0.1"
+
+# When spl-token-2022 depends on this with no-entrypoint, all tests fail!
+# Normally, we want no-entrypoint, except when testing spl-token-2022
+[features]
+default = [ "spl-token-2022/no-entrypoint" ]
+
+[dependencies]
+async-trait = "0.1"
+solana-client = { path = "../client/" }
+solana-program-test = { path = "../program-test/"}
+solana-sdk = { path = "../sdk/"}
+spl-associated-token-account = { path = "../spl-associated", features = ["no-entrypoint"] }
+spl-token-2022 = { path="../program-2022" }
+thiserror = "1.0"
